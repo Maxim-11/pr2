@@ -13,7 +13,13 @@ while (True):
             ves_feb = sum(mass)
             feb = max_month + feb
         max_month = sum(mass) + max_month
-    if ((year % 4) > 0):
-        print("Сумма месяцев = " , max_month*7+month*4+feb-ves_feb)
-    elif((year % 4) == 0):
-        print("Сумма месяцев = " , max_month*7+month*4+feb)
+    if((year % 100) > 0):
+        if ((year % 4) > 0):
+            print("Сумма месяцев = " , max_month*7+month*4+feb-ves_feb)
+        elif((year % 4) == 0):
+            print("Сумма месяцев = " , max_month*7+month*4+feb)
+    elif((year % 100) == 0):
+        if((year % 400) > 0):
+            print("Сумма месяцев = " , max_month*7+month*4+feb-ves_feb)
+        elif((year % 400) == 0):
+            print("Сумма месяцев = " , max_month*7+month*4+feb)
